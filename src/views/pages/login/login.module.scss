@@ -1,0 +1,134 @@
+@import url("../../assets/styleColors.scss");
+
+input {
+  color: rgb(var(--primary_color)) !important;
+}
+
+.Bg {
+  display: flex;
+  width: 100dvw;
+  height: 100dvh;
+  background: linear-gradient(
+    45deg,
+    rgba(var(--primary_color), 0.8),
+    rgba(var(--primary_color), 0.1)
+  );
+  box-sizing: border-box;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+
+  .AppStyle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+
+    .Container {
+      width: 50%;
+      height: 100%;
+    }
+
+    .DivForm {
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+      border-radius: 10px;
+      flex-direction: column;
+      box-shadow: 0 0 2px 4px #1414151f;
+
+      .TitleForm {
+        font-size: 38px;
+        font-weight: bold;
+        padding-bottom: 20px;
+      }
+
+      .socialLogin {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 20px;
+      }
+
+      .socialLogo {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .socialLogo:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  footer {
+    padding: 12px;
+  }
+}
+
+::selection {
+  background-color: rgba(var(--primary_color), 1);
+  color: white;
+}
+
+.FormItem {
+  label:after {
+    content: " " !important;
+  }
+
+  label:before {
+    content: " " !important;
+  }
+}
+
+.Input,
+.Textarea {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 15px;
+  border-width: 2px;
+  color: rgb(var(--primary_color));
+  border-color: rgba(var(--primary_color), 0.5);
+}
+
+.Input:hover,
+.Textarea:hover {
+  box-shadow: 0 0 0 2px rgb(var(--primary_color), 0.5);
+  border-color: rgba(var(--primary_color), 1) !important;
+}
+
+.Input:focus,
+.Textarea:focus {
+  color: rgb(var(--primary_color)) !important;
+  border-color: rgba(var(--primary_color), 1) !important;
+}
+
+.Input {
+  border: 2px solid rgba(var(--primary_color), 0.5) !important;
+  padding: 0 10px;
+  height: 35px;
+  line-height: 1;
+}
+
+.Textarea {
+  resize: none;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .AppStyle {
+    .Container {
+      width: 100% !important;
+      padding: 10px;
+    }
+    .DivForm {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+}
